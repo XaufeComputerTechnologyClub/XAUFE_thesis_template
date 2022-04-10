@@ -12,6 +12,10 @@ make
 在`win 10`以上系统找到`thesis/make.ps1`,
 右击选择运行。
 
+### 运行失败处理方案
+1. 以管理员身份运行powershell
+2. 输入`set-ExecutionPolicy RemoteSigned`
+
 ## 所有版本的说明
 ### 草稿版本(draft)
 对应`main.tex`中的

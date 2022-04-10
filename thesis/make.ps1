@@ -19,6 +19,11 @@ function add_extra {
   Out-File $fileName -Append
 }
 
+if(-not (xelatex --version)){
+  Write-Host "xelatex not found, pleace check you have install texlive" -ForegroundColor Red
+  exit
+}
+
 # encoding
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
 
@@ -49,6 +54,6 @@ rm release.tex
 # make open_report
 build open_report
 
-Write-Host "Build sucessfully,press enter to exit. 构建成功，按下回车键退出" -ForegroundColor Green
+Write-Host "Build sucessfully,press enter to exit." -ForegroundColor Green
 
 Read-Host
