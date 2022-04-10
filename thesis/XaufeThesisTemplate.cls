@@ -90,12 +90,10 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % 插入PDF
 \RequirePackage{pdfpages}
-%\renewcommand{\cftdot}{$\cdot$}
-%\renewcommand{\cftsecdotsep}{1.5}
+
 \renewcommand{\cftsecdotsep}{4.5}
 \setlength{\cftbeforesecskip}{7pt}
 \setlength{\cftbeforesubsecskip}{3pt}
-%\setlength{\cftbeforesubsecskip}{5pt}
 \renewcommand{\cftsecfont}{\bfseries\zihao{-4}\heiti}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand{\cftsecaftersnumb}{\hskip.4em}
@@ -136,14 +134,13 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 \RequirePackage[titletoc,title]{appendix}
 
-%\RequirePackage[title,toc,titletoc]{appendix}
-
 \RequirePackage{etoolbox}
 
 % 超链接 hyperref 的设置
 \RequirePackage[pdfusetitle,final]{hyperref}
 % 智能自动化交叉引用
 \RequirePackage{cleveref}
+
 %% Document Layout
 % 页面布局
 \ifdefined\ebookVersion
@@ -451,7 +448,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\xaufeThesis@cap@keywordsname}{关键字}
 
 
-% 设置目录格式
+% 设置格式
 % 节的目录格式
 \RequirePackage{titletoc}
 % % \titlecontents{section}[0pt]{%
@@ -725,7 +722,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \addto\captionspinyin{
   \renewcommand{\refname}{参考文献}
   \renewcommand\appendixname{附录}
-  % \renewcommand\appendixpagename{Appendix}
+  \renewcommand{\contentsname}{\centering 目\phantom{两字}录}
   \renewcommand\appendixtocname{附录}
 }
 \ifdefined\openReportVersion
