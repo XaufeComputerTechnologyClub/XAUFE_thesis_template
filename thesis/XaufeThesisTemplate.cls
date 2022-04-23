@@ -721,6 +721,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 \addto\captionspinyin{
   \renewcommand{\refname}{参考文献}
+  \renewcommand{\figurename}{图}
   \renewcommand\appendixname{附录}
   \renewcommand{\contentsname}{\centering 目\phantom{两字}录}
   \renewcommand\appendixtocname{附录}
