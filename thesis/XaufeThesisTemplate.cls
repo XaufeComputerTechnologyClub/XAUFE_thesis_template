@@ -530,9 +530,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \bibliographystyle{plain}
 \RequirePackage{gbt7714}
 
-% 优化大于等于和小于等于
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
+% 子图排版
+% 参考: https://blog.csdn.net/BOBOyspa/article/details/107737295
+\RequirePackage{subfloat}
 
 % 算法环境
 \RequirePackage{algorithm}
@@ -662,7 +662,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     % \begin{longtable}
   }{
     \end{longtable}
-    \addtocounter{table}{-1} % 去掉该表，重新计数
   }%
   %
   \renewcommand*{\glossaryheader}{%  Change the table header
@@ -723,7 +722,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \addto\captionspinyin{
   \renewcommand{\refname}{参考文献}
   \renewcommand{\figurename}{图}
-  \renewcommand{\tablename}{表}
   \renewcommand\appendixname{附录}
   \renewcommand{\contentsname}{\centering 目\phantom{两字}录}
   \renewcommand\appendixtocname{附录}
