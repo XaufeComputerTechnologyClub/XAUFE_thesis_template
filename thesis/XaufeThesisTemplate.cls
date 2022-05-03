@@ -945,5 +945,22 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   % text width=0.3\textwidth,
   % fontscale=1.2
 ]
+% reference https://tex.stackexchange.com/questions/611853/tikz-showing-all-node-names-for-debugging
+\tikzstyle{debugstyle} = [
+  append after command={% courtesy of Alenanno ref: https://tex.stackexchange.com/questions/287967/drawing-thin-line-around-a-multipart-tikz-shape#comment696552_287972
+    \pgfextra{
+      \tikzset{debugstyle/.style={}}
+      \node [right,fill=white!20,text=gray!40]
+        (\tikzlastnode name)
+        at (\tikzlastnode.mid east)
+        {\tikzlastnode};
+      % \draw [->,gray!20] (\tikzlastnode name) -- (\tikzlastnode);
+    }
+  }
+]
+\tikzstyle{show node name} = [
+  every node/.append style=debugstyle
+]
+
 
 \endinput
