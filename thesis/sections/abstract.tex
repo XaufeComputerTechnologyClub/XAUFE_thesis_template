@@ -2,84 +2,10 @@
 \graphicspath{{figures/}{../figures/}}
 
 \begin{document}
-\officialDemand{
-  \textbf{中英文摘要和关键词}
-  \begin{officialDemandText}
-    摘要内容应概括地反映出论文的主要内容，
-    说明论文的研究目的、内容、方法、成果和结论。
-    语言力求精练、准确，摘要字数300字左右。
-    关键词是表述论文主题内容信息的单词或术语，
-    是供检索用的主题词条，
-    关键词一般3—5个。
-    摘要与关键词应在同一页。
-    英文摘要和关键词应与中文摘要及关键词的内容相一致,
-    译文要准确、规范、流畅。
-  \end{officialDemandText}
-  \begin{officialDemandText}
-      中英文内容摘要及关键词
 
-      另起一页。
-      论文标题用三号黑体加粗居中，上下各空一行；
-      论文（设计）题目下居中打印“摘要”二字，
-      用三号黑体，字间空一格，单倍行距。
-      “摘要”二字下空一行打印内容，用小四号宋体。
-      中文摘要内容下空一行左起打印中文关键词。
-      中文的“关键词”三字用小四号宋体加粗，
-      内容用小四号宋体，
-      每一关键词之间用分号分开，
-      最后一个关键词后不打标点符号。
-      英文内容摘要及关键词。
-      另起一页。
-
-      英文摘要和关键词按照中文摘要和关键词完全翻译。
-      英文题目题用三号Times New Roman字体并加粗居中，
-      上下各空一行；英文题目下打印英文“Abstract”，
-      用三号Times New Roman字体。
-      “Abstract”下空一行打印内容，
-      用小四号Times New Roman字体。
-      英文摘要内容下空一行左起打印英文关键词，
-      英文的“Key Words”用小四号Times New Roman字体并加粗,内容用小四号Times New Roman字体，
-      每一关键词之间用逗号分开，
-      最后一个关键词后不打标点符号。
-      英文内容摘要的标点符号用英文形式。
-  \end{officialDemandText}
-  在这个模板中要使用\lstinline{\\zhEn{中文}{英文}}
-  一句中文一句英文进行写作，
-  如果不喜欢这样的模式，
-  可以将\lstinline{\\PrintChineseAbstract}
-  替换为中文摘要，
-  将\lstinline{\\PrintenglishAbstract}
-  替换为英文摘要内容。
-
-  另外，由于使用了文件生成命令，
-  编译的时候需要使用命令
-  \lstinline{xelatex -output-directory="./build" main.tex}
-  指定生成摘要的目标文件夹为\lstinline{./build}
-  或使用构建脚本，
-  或将\lstinline{\\subfile{sections/abstract}}
-  注释掉来忽略摘要部分.
-  也可以在
-  \lstinline{./build}
-  新建
-  \lstinline{Chinese_abstract.tex}与
-  \lstinline{English_abstract.tex}
-}
-
-\zhEn{%
-  推荐用这个命令同时写中英文摘要.%
-}{%
-  It is recommended to write both Chinese and English abstracts with this command.
-}
-\zhEn{%
-  这样没有翻译的摘要会自动创建TODO.%
-}{%
-  This does not translate the summary to automatically create Todo item.%
-}
-\zhEn{例如这是等待翻译的一句话}{}
 \ifdraft{
-  \newpage
+  \subfile{../explanations/abstract}
 }{}
-
 %
 \begin{center}
   \section*{\MyTitle}
@@ -102,17 +28,8 @@
 \end{abstract}
 \selectlanguage{pinyin}
 
-\officialDemand{
-  \textbf{目录格式要求}
-  \begin{officialDemandText}
-    中文目录应放在奇数页上起排。
-
-    “目录”两字用三号黑体，两字间距两个字符，
-    居中，段前空1行，段后空1行，20磅。
-
-    目录正文采用Word软件的目录自动生成功能生成目录，
-    小四号宋体。不需出现图、表目录。
-  \end{officialDemandText}
-}
+\ifdraft{
+  \subfile{../explanations/toc}
+}{}
 
 \end{document}
