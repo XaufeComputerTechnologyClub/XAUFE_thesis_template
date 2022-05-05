@@ -653,10 +653,14 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   }%
 }
 
+\def\symbolTableStatementWidth{0.9\textwidth}
+% \newcommand{\setsymbolTableStatementWidth}[1][]{
+%   \def\symbolTableStatementWidth{#1}
+% }
 \newglossarystyle{symblong}{%
   \setglossarystyle{long}% base this style on the list style
   \renewenvironment{theglossary}{% Change the table type --> 3 columns
-    \begin{longtable}{lp{0.9\textwidth}}%
+    \begin{longtable}{lp{\symbolTableStatementWidth}}%
     % \begin{longtable}{cc}%
 
     % \begin{longtable}
