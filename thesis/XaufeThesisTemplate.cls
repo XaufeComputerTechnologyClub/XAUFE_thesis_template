@@ -458,9 +458,13 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % % }{}{\titlerule*[0.5pc]{.}\contentspage}
 % 小节的目录格式
 \titlecontents{subsection}[30pt]{\songti\zihao{-4}}
-{\thecontentslabel\hskip.5em}{}{\titlerule*[0.5pc]{.}\contentspage}
+  {\thecontentslabel\hskip.5em}
+  {}
+  {\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{subsubsection}[55pt]{\songti}
-{\thecontentslabel\hskip.5em}{}{\titlerule*[0.5pc]{.}\contentspage}
+  {\thecontentslabel\hskip.5em}
+  {}
+  {\titlerule*[0.5pc]{.}\contentspage}
 
 % 附录格式问题
 % reference: https://tex.stackexchange.com/questions/195831/problem-with-titlesec-and-appendix
@@ -724,7 +728,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 }
 
 \addto\captionspinyin{
-  \renewcommand{\refname}{参考文献}
+  \renewcommand{\refname}{\centering 参考文献}
   \renewcommand{\figurename}{图}
   \renewcommand\appendixname{附录}
   \renewcommand{\contentsname}{\centering 目\phantom{两字}录}
