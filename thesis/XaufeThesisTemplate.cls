@@ -150,7 +150,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     ]{geometry}
 \else
   \RequirePackage{geometry}
-  \geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=2.2cm}
+  \geometry{top=2.54cm,
+    bottom=2.54cm,
+    left=3cm,
+    right=2.2cm
+  }
 \fi
 
 % 修改tabular 环境, 设置表格中的行间距为正文行间距.
@@ -255,17 +259,19 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \graphicspath{{figures/}}
 % 图表标题
 \DeclareCaptionFont{song}{\songti}
+\DeclareCaptionFont{heiti}{\heiti}
 \DeclareCaptionFont{minusfour}{\zihao{-4}}
+\DeclareCaptionFont{five}{\zihao{5}}
 \captionsetup[figure]{%
 	format=hang,   % 标题从第二行开始都有缩进, 应该和 justification=raggedright 的效果一样.
 	labelsep=quad, % 分隔符是一个空格
-	font={song,minusfour,bf}, % 图的字体, 宋体小四
+	font={heiti,five}, % 图的字体, 黑体五号
 	position=bottom % position=bottom, 不代表标题放在下面, 标题仍放在你放\caption的位置.
 }
 \captionsetup[table]{%
 	format=hang,   % 标题从第二行开始都有缩进, 应该和 justification=raggedright 的效果一样.
 	labelsep=quad, % 分隔符是一个空格
-	font={song,minusfour,bf}, % 表的字体, 宋体小四
+	font={heiti,five}, % 表的字体, 五号黑体
 	position=top % position=bottom, 不代表标题放在下面, 标题仍放在你放\caption的位置.
 }
 % 列表环境设置
@@ -386,10 +392,13 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
       \section*{\abstractname}%
   \else
     \begin{center}{
+      \setlength {\parskip} {12pt} %
       \zihao{4}\bfseries \abstractname\vspace{-.5em}%
-      \vspace{\z@}%
+      % \setlength {\parskip} {12pt}%
+      % \vspace{\z@}%
     }%
     \end{center}%
+    \setlength {\parskip} {12pt}
     \quotation
   \fi
 }
@@ -723,7 +732,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	\renewcommand\keywords[1]{%
 		% \par
 		\vskip1ex
-		\textbf{Keywords}:  #1
+		\textbf{Key Words}:  #1
 	}
 }
 
@@ -969,6 +978,5 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \tikzstyle{show node name} = [
   every node/.append style=debugstyle
 ]
-
 
 \endinput
