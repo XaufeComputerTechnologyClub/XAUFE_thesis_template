@@ -198,31 +198,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	\abovedisplayshortskip \z@ \@plus3\p@
 	\belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@}
 
-  %%%数学定理相关的常量
-  % \newcommand*{\xaufeThesis@cap@definition}{定义}
-  % \newcommand*{\xaufeThesis@cap@theorem}{定理}
-  % \newcommand*{\xaufeThesis@cap@lemma}{引理}
-  % \newcommand*{\xaufeThesis@cap@corollary}{推论}
-  % \newcommand*{\xaufeThesis@cap@assumption}{假设}
-  % \newcommand*{\xaufeThesis@cap@conjecture}{猜想}
-  % \newcommand*{\xaufeThesis@cap@axiom}{公理}
-  % \newcommand*{\xaufeThesis@cap@principle}{定律}
-  % \newcommand*{\xaufeThesis@cap@problem}{问题}
-  % \newcommand*{\xaufeThesis@cap@example}{例}
-  % \newcommand*{\xaufeThesis@cap@proof}{证明}
-  % \newcommand*{\xaufeThesis@cap@solution}{解}
-  % %%%  中文标题名称
-  % \newcommand*{\xaufeThesis@cap@contentsname}{目录}
-  % \newcommand*{\xaufeThesis@cap@listfigurename}{插图清单}
-  % \newcommand*{\xaufeThesis@cap@listtablename}{附表清单}
-  % \newcommand*{\xaufeThesis@cap@refname}{参考文献}
-  % \newcommand*{\xaufeThesis@cap@indexname}{索引}
-  % \newcommand*{\xaufeThesis@cap@figurename}{图}
-  % \newcommand*{\xaufeThesis@cap@tablename}{表}
-  % \newcommand*{\xaufeThesis@cap@appendixname}{附录}
-  % \newcommand*{\xaufeThesis@cap@abstractname}{摘要}
-  %%%  中文关键字
-  % \newcommand*{\xaufeThesis@cap@keywordsname}{关键字}
 
 % 数学环境, 定理等设置
 \newtheorem{definition}{\xaufeThesis@cap@definition}
@@ -739,6 +714,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \addto\captionspinyin{
   \renewcommand{\refname}{\centering 参考文献 \vspace{12pt}}
   \renewcommand{\figurename}{图}
+  \renewcommand{\tablename}{表}
   \renewcommand\appendixname{附录}
   \renewcommand{\contentsname}{\centering 目\phantom{两字}录}
   \renewcommand\appendixtocname{附录}

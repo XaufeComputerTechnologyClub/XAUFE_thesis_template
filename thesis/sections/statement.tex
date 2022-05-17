@@ -2,6 +2,7 @@
 \graphicspath{{figures/}{../figures/}}
 
 \begin{document}
+\vspace{36pt}
 \begin{center}
   \zihao{2}
   \songti{
@@ -10,6 +11,7 @@
     \textbf{本科毕业论文（设计）独创性及知识产权声明}
   }
 \end{center}
+\vspace{24pt}
 
 本人郑重声明：所呈交的毕业论文是本人在导师的指导下取得的成果，论文写作
 严格遵循学术规范。对本论文的研究做出重要贡献的个人和集体，均已在文中以明确
@@ -22,10 +24,15 @@
 \vspace{3cm}
 
 \begin{flushright}
-  毕业论文签名: \hphantom{陈伯硕,,,,00}\\
-  专业：\hphantom{计算机科学与技术} \\
-  \,学号：\hphantom{1831050010000000} \\
-  \qquad 年 \quad 月 \quad 日 \hphantom{0000}
+  % \begin{table}[H]
+    % \centering
+    \begin{tabular}{l}
+      毕业论文签名: \hphantom{陈伯硕,,,,00}\\
+      专业： \MyMajor \\
+      学号： \MyId \\
+      \qquad 年 \quad 月 \quad 日 
+    \end{tabular}
+  % \end{table}
 \end{flushright}
 
 \officialDemand{
@@ -42,6 +49,10 @@
     具体样式见模版。
   \end{officialDemandText}
 }
+
+% \includepdf{figures/statement.pdf}
+% \includegraphics[pages={1}]{figures/cover.pdf}
+% \includegraphics{figures/statement.pdf}
 
 \newpage
 \end{document}
